@@ -1,5 +1,5 @@
 /*
- * untitled.java
+ * ejercicio8.java
  * 
  * Copyright 2020 Linux User <tux@slitaz>
  * 
@@ -21,14 +21,24 @@
  * @author carlos
  */
 
-
-public class ejercicio1 {
-	
+import java.util.Scanner;
+public class ejercicio8 {
+  
 	public static void main (String args[]) {
-    for(int i=1 ; i<=20; i++)
+    Scanner s =new Scanner(System.in);
+    int multiplicador=1;
+    int resultado;
+    
+    System.out.print("Dime un numero:");
+    int n = s.nextInt();
+    
+    for(int i=1; i<=10; i++)
     {
-      System.out.println(i*5);
+      resultado=multiplicador*n;
+      multiplicador=multiplicador+1;
+      System.out.println(resultado);
     }
+    
 		
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * untitled.java
+ * ejercicio13.java
  * 
  * Copyright 2020 Linux User <tux@slitaz>
  * 
@@ -20,16 +20,31 @@
  * 
  * @author carlos
  */
+import java.util.Scanner;
 
-
-public class ejercicio1 {
+public class ejercicio13 {
 	
 	public static void main (String args[]) {
-    for(int i=1 ; i<=20; i++)
+		Scanner s =new Scanner(System.in);
+    int contadornegativo=0;
+    int contadorpositivo=0;
+    
+    System.out.println("escribe 10 numeros:");
+    
+    for(int i=1; i<=10; i++)
     {
-      System.out.println(i*5);
+      int n = s.nextInt();
+      if(n<0)
+      {
+        contadornegativo=contadornegativo+1;
+      }
+      else
+      {
+        contadorpositivo=contadorpositivo+1;
+      }
     }
-		
+    System.out.println("has introducido: "+contadorpositivo+" numeros positivos");
+    System.out.print("has introducido: "+contadornegativo+" numeros negativos");
 	}
 }
 
