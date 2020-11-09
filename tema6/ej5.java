@@ -33,15 +33,18 @@ public class ej5 {
       int num=(int)(Math.random()*100)+100;
       System.out.print(num+" ");
       total+=num;
-      if(max==num){
+      if(max<num){
         max=num;
+      }
+      if(min>num){
+      min=num;
       }
     }
     int media=total/50;
     System.out.print("\nla media de los numeros es: "+media);
     System.out.print("\nel maximo es: "+max);
+    System.out.print("\nel minimi es: "+min);
     
 	}
 }
-
 
