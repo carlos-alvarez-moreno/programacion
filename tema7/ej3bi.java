@@ -1,5 +1,5 @@
 /*
- * ej7.java
+ * ej3bi.java
  * 
  * Copyright 2020 Linux User <tux@slitaz>
  * 
@@ -18,24 +18,39 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
  * MA 02110-1301, USA.
  * 
- * @author carlos 
+ * @author carlos
  */
 
-import java.util.Scanner;
-
-public class ej7 {
+public class ej3bi {
 	
 	public static void main (String args[]) {
 		
-    Scanner s = new Scanner(System.in);
-    int[] num;
-    num = new int[20];
+    int num[][] = new int[5][5];
+    int suma=0;
+    int suma2=0;
+    int total=0;
     
-    for(int i=0; i<20; i++){
-      int aleatorio = (int) (Math.random()*101);
-      num[i]= num[aleatorio];
-      System.out.println(aleatorio);
+    for(int i=0; i<4 ; i++){
+      
+      for(int j=0; j<5; j++){
+        num[i][j]=(int)((Math.random()*800)+100);
+        
+      }
     }
-	}
+    
+    for(int i=0; i<4 ; i++){
+      suma = 0;
+      suma2 = 0;
+      for(int j=0; j<5; j++){
+        System.out.printf("%6d",num[i][j]);
+        suma += num[i][j];
+        suma2 += num[j][i];
+      }
+      total += suma2;
+      System.out.println("| fila "+(i+1)+" total: "+suma+"| columna "+(i+1)+" total: "+suma2);
+    }
+    System.out.print("El total es: "+total);
+  }
 }
+
 

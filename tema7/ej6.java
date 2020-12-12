@@ -1,5 +1,5 @@
 /*
- * ej7.java
+ * ej6.java
  * 
  * Copyright 2020 Linux User <tux@slitaz>
  * 
@@ -18,23 +18,25 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
  * MA 02110-1301, USA.
  * 
- * @author carlos 
+ * @author Carlos
  */
-
 import java.util.Scanner;
 
-public class ej7 {
+public class ej6 {
 	
 	public static void main (String args[]) {
-		
+    
     Scanner s = new Scanner(System.in);
     int[] num;
-    num = new int[20];
+    num = new int[15];
     
-    for(int i=0; i<20; i++){
-      int aleatorio = (int) (Math.random()*101);
-      num[i]= num[aleatorio];
-      System.out.println(aleatorio);
+    for(int i=0; i<15;i++){
+      System.out.print("introduce numeros ");
+      num[i] = s.nextInt();
+    }
+    for(int j=num.length-1; j>=1 ; j--){
+      num[j] = num[j-1];
+      System.out.print(num[j]);
     }
 	}
 }

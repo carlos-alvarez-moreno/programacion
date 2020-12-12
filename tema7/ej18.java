@@ -1,5 +1,5 @@
 /*
- * ej7.java
+ * untitled.java
  * 
  * Copyright 2020 Linux User <tux@slitaz>
  * 
@@ -18,24 +18,36 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
  * MA 02110-1301, USA.
  * 
- * @author carlos 
+ * 
  */
 
-import java.util.Scanner;
 
-public class ej7 {
+public class ej18 {
 	
 	public static void main (String args[]) {
 		
-    Scanner s = new Scanner(System.in);
-    int[] num;
-    num = new int[20];
+    int num[] = new int[10];
     
-    for(int i=0; i<20; i++){
-      int aleatorio = (int) (Math.random()*101);
-      num[i]= num[aleatorio];
-      System.out.println(aleatorio);
+    for(int i=0; i<10; i++){
+      System.out.printf("%-4d",i);
     }
-	}
+    System.out.println();
+    for(int i=0; i<10; i++){
+      num[i] = (int)(Math.random()*201);
+      System.out.printf("%-4d",num[i]);
+    }
+    
+    System.out.println();
+    System.out.println();
+    
+    for(int i=0; i<10; i++){
+      System.out.printf("%-4d",i);
+    }
+    System.out.println();
+    for(int i=0; i<10; i++){
+
+    }
+  }
 }
+
 
